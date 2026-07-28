@@ -1,0 +1,25 @@
+[package]
+name = "lattice"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+lattice-codec = { path = "../lattice-codec" }
+thiserror = "1"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "sync", "time", "macros", "io-util"] }
+tokio-util = { version = "0.7", features = ["codec"] }
+memmap2 = "0.9"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+rand = "0.8"
+futures = "0.3"
+bytes = "1"
+raft = "0.7"
+slog = "2"
+protobuf = "2"
+
+[dev-dependencies]
+tempfile = "3"
