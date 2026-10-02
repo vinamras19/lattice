@@ -1,0 +1,18 @@
+node_id = 1
+data_dir = "./data"
+listen_addr = "0.0.0.0:7700"
+api_addr = "0.0.0.0:7800"
+memtable_max_points = 100000
+
+# Single node when peers is empty. For a cluster, list every node including this
+# one; node_id above must match one of the ids here. Each node runs with its own
+# config (distinct node_id / listen_addr / api_addr / data_dir, identical peers).
+# [[peers]]
+# id = 1
+# addr = "127.0.0.1:7700"
+# [[peers]]
+# id = 2
+# addr = "127.0.0.1:7701"
+# [[peers]]
+# id = 3
+# addr = "127.0.0.1:7702"
